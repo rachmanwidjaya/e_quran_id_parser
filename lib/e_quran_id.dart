@@ -29,7 +29,7 @@ class EQuranID {
   /// You can use this method like this:
   ///
   /// ```dart
-  ///String res = await QuranLib.apiRequest(
+  ///String res = await EQuranID.apiRequest(
   ///   'https://example.com/target/',
   ///   method: HTTPMethod.post //default get if null
   ///   headers: {
@@ -69,7 +69,7 @@ class EQuranID {
   /// You can use this method like this:
   ///
   /// ```dart
-  ///   List<Surat> suratList= await QuranLib.getAllSurat();
+  ///   List<Surat> suratList= await EQuranID.getAllSurat();
   ///
   /// ```
   /// **Notes:**
@@ -87,7 +87,7 @@ class EQuranID {
   /// You can use this method like this:
   ///
   /// ```dart
-  ///   Surat surat = await QuranLib.getSurat(nomorSurat: 1);
+  ///   Surat surat = await EQuranID.getSurat(nomorSurat: 1);
   ///
   /// ```
   /// **Notes:**
@@ -105,7 +105,7 @@ class EQuranID {
   /// You can use this method like this:
   ///
   /// ```dart
-  ///   Surat surat = await QuranLib.getSurat(nomorSurat: 1);
+  ///   Surat surat = await EQuranID.getSurat(nomorSurat: 1);
   ///
   /// ```
   /// **Notes:**
