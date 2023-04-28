@@ -34,15 +34,15 @@ Then you can use This:
 - Get all Surat
 
 ```dart 
-List<Surat> suratList = await QuranLib.getAllSurat();
+List<Surat> suratList = await EQuranID.getAllSurat();
 ```
 - Get Surat By number 
 ```dart
-Surat surat = await  QuranLib.getSurat(nomorSurat: 1);
+Surat surat = await  EQuranID.getSurat(nomorSurat: 1);
 ```
 - Get Tafsir By number
 ```dart
-Surat surat = await  QuranLib.getTafsir(nomorSurat: 1);
+Surat surat = await  EQuranID.getTafsir(nomorSurat: 1);
 ```
 
 
