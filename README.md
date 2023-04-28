@@ -1,5 +1,6 @@
 # Al-Quran Api Parser Flutter
-### This library is taken from: 
+### Unofficial (equran.id)library
+
 
 [![N|Solid](https://equran.id/images/graph.png)](https://equran.id/)
 
