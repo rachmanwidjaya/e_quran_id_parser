@@ -12,8 +12,8 @@ import 'package:e_quran_id/src/domain/entity/tafsir.dart';
 ///    String tempatTurun = '',
 ///    String arti = '',
 ///    String deskripsi = '',
-///    Map<String, dynamic> audioFulls = const {},
-///    Ayat ayats = const [],
+///    List<String> audioFulls = const [],
+///    List<Ayat> ayats = const [],
 ///    Tafsir tafsirs = const [],
 ///  });
 ///```

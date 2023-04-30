@@ -6,7 +6,7 @@ import 'dart:convert';
 ///    String teksArab = '',
 ///    String teksLatin = '',
 ///    String teksIndonesia = '',
-///    Map<String, dynamic> audios = const {},
+///    List<String> audios = const [],
 ///});
 ///```
 class Ayat {

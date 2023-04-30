@@ -6,6 +6,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'src/core/app_exception.dart';
+import 'src/core/fetch_data_exception.dart';
 import 'src/data/model/surat_model.dart';
 import 'src/domain/entity/surat.dart';
 export 'src/domain/entity/ayat.dart';
@@ -21,7 +22,6 @@ class EQuranID {
   static final _QuranRepository _quranRepository =
       _QuranRepositoryImpl.instance;
   static final _ApiRepository _apiRepository = _ApiRepositoryImpl.instance;
-  // static final Kemenag kemenag = Kemenag();
 
   /// ## Bonus Feature
   /// this feature is made using `'dart:io'` libraries
@@ -82,7 +82,9 @@ class EQuranID {
   ///
   ///you have to handle the exception!
   static Future<List<Surat>> getAllSurat() async =>
-      await _quranRepository.getAllSurat();
+      await _quranRepository.getAllSurat(
+        repository: _apiRepository,
+      );
 
   /// You can use this method like this:
   ///
@@ -100,7 +102,10 @@ class EQuranID {
   ///
   ///you have to handle the exception!
   static Future<Surat> getSurat({required int nomorSurat}) async =>
-      await _quranRepository.getSurat(nomorSurat: nomorSurat);
+      await _quranRepository.getSurat(
+        nomorSurat: nomorSurat,
+        repository: _apiRepository,
+      );
 
   /// You can use this method like this:
   ///
@@ -118,5 +123,8 @@ class EQuranID {
   ///
   ///you have to handle the exception!
   static Future<Surat> getTafsir({required int nomorSurat}) async =>
-      await _quranRepository.getTafsir(nomorSurat: nomorSurat);
+      await _quranRepository.getTafsir(
+        nomorSurat: nomorSurat,
+        repository: _apiRepository,
+      );
 }

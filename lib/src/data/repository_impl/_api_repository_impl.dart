@@ -44,14 +44,16 @@ class _ApiRepositoryImpl extends _ApiRepository {
 
       return _handleResponse(response.statusCode, responseBody);
     } on TimeoutException catch (e, s) {
-      log('$e', error: e, stackTrace: s);
-      throw AppException(message: 'Request time out', data: e);
+      throw FetchDataException(
+        message: 'Request time out',
+        data: e,
+        stackTrace: s,
+      );
     } on SocketException catch (e, s) {
-      log('$e', error: e, stackTrace: s);
-      throw AppException(message: 'Connection Error', data: e);
+      throw FetchDataException(
+          message: 'Connection Error', data: e, stackTrace: s);
     } catch (e, s) {
-      log('$e', error: e, stackTrace: s);
-      throw AppException(message: '$e', data: e);
+      throw FetchDataException(message: '$e', data: e, stackTrace: s);
     }
   }
 
@@ -65,7 +67,7 @@ class _ApiRepositoryImpl extends _ApiRepository {
       } catch (_) {
         message = _handleError(statusCode);
       }
-      throw AppException(message: message);
+      throw FetchDataException(message: message);
     }
   }
 
